@@ -12,9 +12,9 @@ public class Resume
 
         // Notice the use of the custom data type "Job" in this loop
         // Personally I think that we bring the characteristics of the Job class by using Job j and thats why it lets us use the Display() Method
-        foreach (Job j in _jobs)
+        foreach (Job job in _jobs)
         {
-            j.Display();
+            job.Display();
         }
     } 
 }
