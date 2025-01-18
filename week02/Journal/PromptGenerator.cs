@@ -11,7 +11,8 @@ public class PromptGenerator
         // creating an instance of the Random Class, and then using it to get the next integer
         // in a particular range.
         Random randomGenerator = new Random();
-        int promptNumber = randomGenerator.Next(0,4);
+        // its not showing the last prompt thats why the 5 
+        int promptNumber = randomGenerator.Next(0,5);
 
         return $"{_prompts[promptNumber]}";
     }
