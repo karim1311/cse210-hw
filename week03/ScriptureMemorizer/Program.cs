@@ -12,7 +12,9 @@ class Program
 
         Console.Write(reference1.GetDisplayText());
 
-        // Scripture scripture = new Scripture();
+        Scripture scripture = new Scripture(reference1,"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
+
+        scripture.GetDisplayText();
 
 
     }

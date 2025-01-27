@@ -1,19 +1,15 @@
 public class Scripture
 {
     // ATTRIBUTES
-    // private Reference = new Reference(chapter);
+    private Reference _reference = new Reference();
     private List<Word> _words = new List<Word>();
-
-    private string _text;
-
 
     // CONSTRUCTORS
     public Scripture(Reference reference,string text)
     {
-        // Reference ref1 = new Reference();
-        _text = text;
-
+        _reference = reference;
         
+        _words = text;
     }
 
     // END OF CONSTRUCTORS
@@ -27,7 +23,7 @@ public class Scripture
 
     public string GetDisplayText()
     {
-        return "";
+        return $"{_reference} {_words}";
     }
 
     public bool IsCompletelyHidden()
