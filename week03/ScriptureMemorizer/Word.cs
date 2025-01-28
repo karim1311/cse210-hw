@@ -16,12 +16,14 @@ public class Word
     // METHODS
     public void Hide()
     {
+        _isHidden = true;
+        _text = "___";
 
     }
 
     public void Show()
     {
-
+        Console.Write(_text);
     }
 
     public bool IsHidden()
@@ -31,6 +33,6 @@ public class Word
 
     public string GetDisplayText()
     {
-        return "";
+        return $"{_text}";
     }
 }
