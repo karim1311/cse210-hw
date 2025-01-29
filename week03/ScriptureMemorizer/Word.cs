@@ -16,9 +16,8 @@ public class Word
     // METHODS
     public void Hide()
     {
+        _text = new string('_',_text.Length);
         _isHidden = true;
-        _text = "___";
-
     }
 
     public void Show()
@@ -28,7 +27,7 @@ public class Word
 
     public bool IsHidden()
     {
-        return false;
+        return _isHidden;
     }
 
     public string GetDisplayText()

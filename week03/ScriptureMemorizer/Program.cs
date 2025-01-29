@@ -24,9 +24,18 @@ class Program
                 Console.WriteLine("you pressed enter");
                 wordsHidden++;
                 scripture.HideRandomWords(wordsHidden);
+
             }
 
+            // if(scripture.IsCompletelyHidden() == true)
+            // {
+            //     enter = "quit";
+            // };
+            Console.Clear();
+
         } while (enter != "quit");
+
+        Console.WriteLine(scripture.GetDisplayText());
 
     }
 }
