@@ -27,10 +27,10 @@ class Program
 
             }
 
-            // if(scripture.IsCompletelyHidden() == true)
-            // {
-            //     enter = "quit";
-            // };
+            if(scripture.IsCompletelyHidden() == true)
+            {
+                enter = "quit";
+            };
             Console.Clear();
 
         } while (enter != "quit");
