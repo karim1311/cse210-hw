@@ -1,17 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using library_demo;
 class Program
 {
     static void Main(string[] args)
     {
-        Person p = new Person();
-        p.SetFirstName("Peter");
-        Console.WriteLine(p.getFirstName());
+       Book book1 = new Book();
+       book1.SetAuthor("Smith");
+       book1.SetTitle("A Great Book");
 
-        Person p1 = new Person(); // Don't pass any information to get the default values
-        Person p2 = new Person("Jane","Doe"); // pass the first and last names
-        Person p3 = new Person("Mrs.","Jane","Doe"); // pass all three variables
+       Console.WriteLine(book1.GetBookInfo());
+
+
+       PictureBook book2 = new PictureBook();
+       book2.SetAuthor("Jones");
+       book2.SetTitle("A Wonderful Picture Book");
+       book2.SetIllustrator("Burton");
+
+       Console.WriteLine(book2.GetBookInfo());
     }
 
 }
