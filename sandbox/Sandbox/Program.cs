@@ -19,6 +19,13 @@ class Program
        book2.SetIllustrator("Burton");
 
        Console.WriteLine(book2.GetBookInfo());
+       Console.WriteLine(book2.GetPictureBookInfo());
+
+       Book book3 = new Book("Edwatds","Another Book");
+       Console.WriteLine(book3.GetBookInfo());
+
+       PictureBook book4 = new PictureBook("Paul johnson","A fun picture book", "Fernanda Ortega");
+       Console.WriteLine(book4.GetPictureBookInfo());
     }
 
 }
