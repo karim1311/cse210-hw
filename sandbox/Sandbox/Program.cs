@@ -6,26 +6,34 @@ class Program
 {
     static void Main(string[] args)
     {
-       Book book1 = new Book();
-       book1.SetAuthor("Smith");
-       book1.SetTitle("A Great Book");
+        HourlyEmployee hEmployee = new HourlyEmployee();
+        hEmployee.SetName("John");
+        hEmployee.SetIdNumber("123abc");
+        hEmployee.SetPayRate(15);
+        hEmployee.SetHoursWorked(35);
 
-       Console.WriteLine(book1.GetBookInfo());
+        SalaryEmployee sEmployee = new SalaryEmployee();
+        sEmployee.SetName("Peter");
+        sEmployee.SetIdNumber("456def");
+        sEmployee.SetSalary(60000);     
 
+        DisplayEmployeeInformation(hEmployee);
+        DisplayEmployeeInformation(sEmployee);
 
-       PictureBook book2 = new PictureBook();
-       book2.SetAuthor("Jones");
-       book2.SetTitle("A Wonderful Picture Book");
-       book2.SetIllustrator("Burton");
+        List<Employee> employees = new List<Employee>();
+        employees.Add(hEmployee);
+        employees.Add(sEmployee);
 
-       Console.WriteLine(book2.GetBookInfo());
-       Console.WriteLine(book2.GetPictureBookInfo());
+        foreach(Employee emp in employees)
+        {
+            float pay = emp.GetPay();
+        }
+    }
 
-       Book book3 = new Book("Edwatds","Another Book");
-       Console.WriteLine(book3.GetBookInfo());
-
-       PictureBook book4 = new PictureBook("Paul johnson","A fun picture book", "Fernanda Ortega");
-       Console.WriteLine(book4.GetPictureBookInfo());
+    public static void DisplayEmployeeInformation(Employee employee)
+    {
+        float pay = employee.GetPay();
+        Console.WriteLine($"{employee.GetName()} will be paid ${pay}");
     }
 
 }
