@@ -15,10 +15,18 @@ class Program
         // Instance of the SwimmingActivity Class 
         SwimmingActivity swimming1 = new SwimmingActivity("Swimming", "22 Feb 2025", 15, 10); // number of laps
 
+        List<Activity> activities = new List<Activity>();
+
+        activities.Add(running1);
+        activities.Add(cycling1);
+        activities.Add(swimming1);
+
         Console.Clear();
 
-        Console.WriteLine(running1.GetSummary());
-        Console.WriteLine(cycling1.GetSummary());
-        Console.WriteLine(swimming1.GetSummary());
+        foreach(Activity activity in activities)
+        {
+            Console.WriteLine(activity.GetSummary());
+        }
+
     }
 }
