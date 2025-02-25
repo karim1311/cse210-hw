@@ -16,25 +16,31 @@ public class CheckListGoal : Goal
         _target = target;
         _bonus = bonus;
     }
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
+        int totalpoints = 0;
+        int points = GetPoints();
+
         _amountCompleted++;
         IsComplete();
         if (IsComplete() == true)
         {
-            Console.WriteLine($"Congratulations! You have earned {GetPoints()} points!");
+            totalpoints = points + _bonus;
+            Console.WriteLine($"Congratulations! You have earned {totalpoints} points!");
         } else 
         {
-            Console.WriteLine($"Congratulations! You have earned {GetPoints() - _bonus} points!");
+            totalpoints = points;
+            Console.WriteLine($"Congratulations! You have earned {totalpoints} points!");
         }
+        return totalpoints;
     }
 
-    public override int GetPoints()
-    {
-        int points = GetPoints();
+    // public override int GetPoints()
+    // {
+    //     int points = GetPoints();
 
-        return points + _bonus;
-    }
+    //     return points + _bonus;
+    // }
 
     public override bool IsComplete()
     {

@@ -171,8 +171,8 @@ public class GoalManager
 
         if (_goals[accomplishedGoal].IsComplete() == false)
         {
-            _goals[accomplishedGoal].RecordEvent();
-            _score += _goals[accomplishedGoal].GetPoints();
+            _score += _goals[accomplishedGoal].RecordEvent();
+            // _score += _goals[accomplishedGoal].GetPoints();
             Console.WriteLine($"You now have {_score} points.");
 
         } else {
